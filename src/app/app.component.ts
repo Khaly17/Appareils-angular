@@ -9,6 +9,20 @@ import { Component } from '@angular/core';
 export class AppComponent {
   isAuth = false;
 
+  appareils = [
+    {
+      name: 'Television',
+      status: 'off'
+    },
+    {
+      name: 'Machine a laver',
+      status: 'on'
+    },
+    {
+      name: 'Ordinateur',
+      status: 'off'
+    },
+  ]
   appareilOne = "Televisions";
   appareilTwo = "Ordinateur";
   appareilThree = "Machine a laver";
