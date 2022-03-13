@@ -9,6 +9,7 @@ import { Component } from '@angular/core';
 export class AppComponent {
   isAuth = false;
 
+  lastDate = new Date();
   appareils = [
     {
       name: 'Television',
