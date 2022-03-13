@@ -5,6 +5,22 @@ import { Component } from '@angular/core';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
+
 export class AppComponent {
-  title = 'khd-appareil';
+  isAuth = false;
+
+  appareilOne = "Televisions";
+  appareilTwo = "Ordinateur";
+  appareilThree = "Machine a laver";
+  
+  constructor() {
+    setTimeout(() =>{
+      this.isAuth = true;
+    }, 4000)
+  }
+
+  onAllumer(): void {
+    
+    console.log("this.isAuth");
+  }
 }
