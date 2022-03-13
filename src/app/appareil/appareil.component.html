@@ -1,11 +1,18 @@
-<li class="list-group-item">
+<li [ngClass]="{'list-group-item': true,
+                'list-group-item-success': status === 'on',
+                'list-group-item-danger': status === 'off'
+            }"
+>
+
     <div 
-    style="width:20px;height: 20px;background-color: red;"
-    *ngIf="status==='on'"
+        style="width:20px;height: 20px;background-color: red;"
+        *ngIf="status==='off'"
     >
 
     </div>
-    <h4>
+    <h4
+    [ngStyle]="{color: getColor()}"
+    >
         Appareil: {{appareilName}} --  Status: {{getStatus()}} 
     </h4>
     <input type="text" class="form-control" [(ngModel)]="appareilName">
