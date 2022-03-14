@@ -2,7 +2,7 @@
     <div class="row">
         <div class="col-xs-12">
             <h2>Mes Appareils</h2>
-            <p>Mise a jour: {{lastDate | date | lowercase}}</p>
+            <p>Mise a jour: {{lastUpdate | async  | date | lowercase}}</p>
             <ul class="list-group" >
                 
                 <app-appareil 
@@ -12,9 +12,17 @@
                 ></app-appareil>
                 
             </ul >
-            <button class="btn btn-success" 
+            <button 
+                class="btn btn-success" 
                 [disabled] = "!isAuth"
                 (click)="onAllumer()"
+            >
+            On all
+            </button>
+
+            <button 
+                class="btn btn-danger" 
+                (click)="offAll()"
             >
             On all
             </button>
