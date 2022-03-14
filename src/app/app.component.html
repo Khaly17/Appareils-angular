@@ -6,9 +6,11 @@
             <ul class="list-group" >
                 
                 <app-appareil 
-                    *ngFor="let appareil of appareils"
+                    *ngFor="let appareil of appareils; let i = index"
+                    [indexOfAppareil]="i"
                     [appareilName] = "appareil.name" 
                     [status]="appareil.status"
+                    
                 ></app-appareil>
                 
             </ul >

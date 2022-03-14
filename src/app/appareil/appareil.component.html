@@ -1,19 +1,9 @@
 <li [ngClass]="{'list-group-item': true,
                 'list-group-item-success': status === 'on',
-                'list-group-item-danger': status === 'off'
-            }"
->
+                'list-group-item-danger': status === 'off' }" >
 
-    <div 
-        style="width:20px;height: 20px;background-color: red;"
-        *ngIf="status==='off'"
-    >
+    <h4 [ngStyle]="{color: getColor()}"> Appareil: {{appareilName}} --  Status: {{getStatus()}} </h4>
+    <button  class="btn btn-success" (click)="onSwitchOne()" [disabled] = "status === 'on'">On </button>
+    <button  class="btn btn-success" (click)="onSwitchOff()" [disabled] = "status === 'off'">Off</button>
 
-    </div>
-    <h4
-    [ngStyle]="{color: getColor()}"
-    >
-        Appareil: {{appareilName}} --  Status: {{getStatus()}} 
-    </h4>
-    <input type="text" class="form-control" [(ngModel)]="appareilName">
 </li>
