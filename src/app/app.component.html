@@ -1,33 +1,14 @@
+<nav class="navbar navbar-default">
+    <div class="container-fluid">
+        <ul class="nav navbar-nav">
+            <li routerLinkActive="active"><a routerLink="auth">Auth</a></li>
+            <li routerLinkActive="active"><a routerLink="appareils">Appareil</a></li>
+        </ul>
+    </div>
+</nav>
+
 <div class="container">
     <div class="row">
-        <div class="col-xs-12">
-            <h2>Mes Appareils</h2>
-            <p>Mise a jour: {{lastUpdate | async  | date | lowercase}}</p>
-            <ul class="list-group" >
-                
-                <app-appareil 
-                    *ngFor="let appareil of appareils; let i = index"
-                    [indexOfAppareil]="i"
-                    [appareilName] = "appareil.name" 
-                    [status]="appareil.status"
-                    
-                ></app-appareil>
-                
-            </ul >
-            <button 
-                class="btn btn-success" 
-                [disabled] = "!isAuth"
-                (click)="onAllumer()"
-            >
-            On all
-            </button>
-
-            <button 
-                class="btn btn-danger" 
-                (click)="offAll()"
-            >
-            On all
-            </button>
-        </div>
+        <router-outlet></router-outlet>
     </div>
 </div>

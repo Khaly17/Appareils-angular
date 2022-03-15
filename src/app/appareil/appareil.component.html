@@ -3,7 +3,7 @@
                 'list-group-item-danger': status === 'off' }" >
 
     <h4 [ngStyle]="{color: getColor()}"> Appareil: {{appareilName}} --  Status: {{getStatus()}} </h4>
-    <button  class="btn btn-success" (click)="onSwitchOne()" [disabled] = "status === 'on'">On </button>
-    <button  class="btn btn-success" (click)="onSwitchOff()" [disabled] = "status === 'off'">Off</button>
+    <button  class="btn btn-success" (click)="onSwitchOne()" [disabled] = "status === 'on'" style="margin-right:10px">On </button>
+    <button  class="btn btn-danger" (click)="onSwitchOff()" [disabled] = "status === 'off'">Off</button>
 
 </li>
