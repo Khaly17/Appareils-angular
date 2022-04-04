@@ -1,6 +1,7 @@
 {
   "name": "khd-appareil",
   "version": "0.0.0",
+  "author": "DIENG Khaly SofWare developer",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
